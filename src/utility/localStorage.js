@@ -46,4 +46,4 @@ const saveInWishList = (id) => {
     return true;
 }
 
-export {saveReadBooks, saveInWishList};
+export {getStoredReadBooks,getStoredWishList,saveReadBooks, saveInWishList};
