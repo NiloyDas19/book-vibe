@@ -15,8 +15,11 @@ const BookDetails = () => {
 
     const handleWishList = () => {
         const action = saveInWishList(idInt);
-        if(!action){
-            toast("This book has already read");
+        if(action == 1){
+            toast("This book has already read.");
+        }
+        else if(action == 2){
+            toast("This book is already in Wishlist.");
         }
         else{
             toast("Wow! This book is added in Wish List.");

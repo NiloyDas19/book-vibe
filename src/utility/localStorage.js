@@ -38,12 +38,13 @@ const saveInWishList = (id) => {
     const isAlreadyRead = storedReadBooks.find(bookId => bookId === id);
     const storedWishListBooks = getStoredWishList();
     const exists = storedWishListBooks.find((bookId) => bookId === id);
-    if(isAlreadyRead || exists) return false;
+    if(isAlreadyRead) return 1;
     if(!exists){
         storedWishListBooks.push(id);
         localStorage.setItem('stored-Wish-List-books', JSON.stringify(storedWishListBooks));
+        return 3;
     }
-    return true;
+    return 2;
 }
 
 export {getStoredReadBooks,getStoredWishList,saveReadBooks, saveInWishList};

@@ -17,7 +17,7 @@ const ReadORWishListBook = ({ book }) => {
                     <h2 className='text-3xl font-playfair-display font-bold'>{bookName}</h2>
                     <p className='font-semibold'>By: {author}</p>
                     <div className='flex flex-col md:flex-row gap-4'>
-                        <div className='flex gap-1'>
+                        <div className='flex gap-5'>
                             <p className='font-bold'>Tag</p>
                             {
                                 tags.map((tag, index) => <div key={index} className="text-[#23BE0A]" >#{tag}</div>)
