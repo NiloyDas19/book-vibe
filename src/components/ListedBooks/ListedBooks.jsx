@@ -38,20 +38,20 @@ const ListedBooks = () => {
         const newReadBooks = [...readBooks];
         const newWishBooks = [...wiseListBooks];
         if(operation === 'totalPages'){
-            newReadBooks.sort(function(a, b){return a.totalPages-b.totalPages});
-            newWishBooks.sort(function(a, b){return a.totalPages-b.totalPages});
+            newReadBooks.sort(function(a, b){return b.totalPages-a.totalPages});
+            newWishBooks.sort(function(a, b){return b.totalPages-a.totalPages});
             setReadBooks(newReadBooks);
             setWiseListBooks(newWishBooks);
         }
         else if(operation === 'rating'){
-            newReadBooks.sort(function(a, b){return a.rating-b.rating});
-            newWishBooks.sort(function(a, b){return a.rating-b.rating});
+            newReadBooks.sort(function(a, b){return b.rating-a.rating});
+            newWishBooks.sort(function(a, b){return b.rating-a.rating});
             setReadBooks(newReadBooks);
             setWiseListBooks(newWishBooks);
         }
         else if(operation === 'yearOfPublishing'){
-            newReadBooks.sort(function(a, b){return a.yearOfPublishing-b.yearOfPublishing});
-            newWishBooks.sort(function(a, b){return a.yearOfPublishing-b.yearOfPublishing});
+            newReadBooks.sort(function(a, b){return b.yearOfPublishing-a.yearOfPublishing});
+            newWishBooks.sort(function(a, b){return b.yearOfPublishing-a.yearOfPublishing});
             setReadBooks(newReadBooks);
             setWiseListBooks(newWishBooks);
         }

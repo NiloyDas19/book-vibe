@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 
 const TriangleBar = (props) => {
     const getPath = (x, y, width, height) => (
@@ -12,5 +13,14 @@ const TriangleBar = (props) => {
 
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
 };
+
+TriangleBar.propTypes = {
+    fill : PropTypes.string,
+    x : PropTypes.number,
+    y : PropTypes.number,
+    width : PropTypes.number,
+    height : PropTypes.number,
+}
+
 
 export default TriangleBar;

@@ -1,5 +1,5 @@
 
-import { BarChart, Bar, XAxis, YAxis, Label, Cell, CartesianGrid, ResponsiveContainer } from 'recharts';
+import { BarChart, Bar, XAxis, YAxis, Cell, CartesianGrid, ResponsiveContainer } from 'recharts';
 import TriangleBar from '../TriangleBar/TriangleBar';
 import { getStoredReadBooks } from '../../utility/localStorage';
 import { useLoaderData } from 'react-router-dom';
@@ -14,7 +14,7 @@ const PagesToRead = () => {
     }
     console.log(data);
 
-    const renderCustomBarLabel = ({ payload, x, y, width, height, value }) => {
+    const renderCustomBarLabel = ({ x, y, width, value }) => {
         return <text x={x + width / 2} y={y} fill="#8884d8" textAnchor="middle" dy={-6}>{`${value}`}</text>;
     };
 
