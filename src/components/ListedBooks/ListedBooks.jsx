@@ -6,7 +6,6 @@ const ListedBooks = () => {
     const [readBooks, setReadBooks] = useState([]);
     const [wiseListBooks, setWiseListBooks] = useState([]);
 
-
     useEffect(() => {
         const booksId1 = getStoredReadBooks();
         const booksId2 = getStoredWishList();
@@ -33,6 +32,7 @@ const ListedBooks = () => {
 
 
     const handelState = (e) => {
+        e.preventDefault();
         console.log(e.target.value);
         const operation = e.target.value;
         const newReadBooks = [...readBooks];
