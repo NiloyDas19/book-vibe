@@ -7,6 +7,7 @@ const Header = () => {
         <li><NavLink to="/listed-books" className={({ isActive }) => (isActive ? 'is-active' : 'not-active')}>Listed Books</NavLink></li>
         <li><NavLink to="/pages-to-read" className={({ isActive }) => (isActive ? 'is-active' : 'not-active')}>Pages to Read</NavLink></li>
         <li><NavLink to="/top-five-books" className={({ isActive }) => (isActive ? 'is-active' : 'not-active')}>Top Five Books</NavLink></li>
+        <li><NavLink to="/faq" className={({ isActive }) => (isActive ? 'is-active' : 'not-active')}>FAQ</NavLink></li>
     </>
 
     return (

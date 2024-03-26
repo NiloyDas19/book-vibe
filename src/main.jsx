@@ -12,6 +12,7 @@ import ListedBooks from './components/ListedBooks/ListedBooks';
 import PagesToRead from './components/PagesToRead/PagesToRead';
 import BookDetails from './components/BookDetails/BookDetails';
 import TopFiveBooks from './components/TopFiveBooks/TopFiveBooks';
+import FAQ from './components/FAQ/FAQ';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path : "/top-five-books",
         element : <TopFiveBooks></TopFiveBooks> 
+      },
+      {
+        path : "/faq",
+        element : <FAQ></FAQ>
       },
       {
         path : "/book-details/:id",
