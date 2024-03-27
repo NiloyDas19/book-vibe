@@ -64,10 +64,10 @@ const ListedBooks = () => {
             </div>
             <div className="flex flex-col items-center">
                 <select className="select select-bordered w-full max-w-xs bg-[#23BE0A] text-white font-bold" onChange={handelState}>
-                    <option disabled selected>Sort By</option>
-                    <option value='rating'>Rating</option>
-                    <option value='totalPages'>Number of pages</option>
-                    <option value='yearOfPublishing'>Publisher year</option>
+                    <option disabled selected className="bg-gray-200 text-black">Sort By</option>
+                    <option value='rating' className="bg-gray-200 text-black" >Rating</option>
+                    <option value='totalPages' className="bg-gray-200 text-black">Number of pages</option>
+                    <option value='yearOfPublishing' className="bg-gray-200 text-black">Publisher year</option>
                 </select>
             </div>
             <div role="tablist" className="tabs tabs-lifted">

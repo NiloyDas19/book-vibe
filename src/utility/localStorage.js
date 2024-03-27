@@ -29,7 +29,9 @@ const saveReadBooks = (id) => {
     if(!exists){
         storedReadBooks.push(id);
         localStorage.setItem('stored-read-books', JSON.stringify(storedReadBooks));
+        return 1;
     }
+    return 0;
 }
 
 

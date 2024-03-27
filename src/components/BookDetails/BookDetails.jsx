@@ -9,20 +9,21 @@ const BookDetails = () => {
     const idInt = parseInt(id);
     const book = books.find((book) => book.bookId === idInt);
     const handleReadBook = () => {
-        saveReadBooks(idInt);
-        toast("Wow! You read this book.")
+        const action  = saveReadBooks(idInt);
+        if(action) toast.success("Wow! This book is added in the read list.")
+        else toast.warning("This book has already in read list .");
     }
 
     const handleWishList = () => {
         const action = saveInWishList(idInt);
         if(action == 1){
-            toast("This book has already read.");
+            toast.info("This book has already in read list .");
         }
         else if(action == 2){
-            toast("This book is already in Wishlist.");
+            toast.warning("This book has already in Wishlist.");
         }
         else{
-            toast("Wow! This book is added in Wish List.");
+            toast.success("Wow! This book is added in Wish List.");
         }
     }
 
@@ -33,7 +34,7 @@ const BookDetails = () => {
             </div>
             <div className="flex-1 space-y-6">
                 <div className="space-y-4">
-                    <h2 className="text-5xl font-playfair-display font-bold">{book.bookName}</h2>
+                    <h2 className="text-3xl md:text-5xl font-playfair-display font-bold">{book.bookName}</h2>
                     <p className="font-semibold">By: {book.author}</p>
                 </div>
                 <div className="border-t-2"></div>
@@ -43,7 +44,7 @@ const BookDetails = () => {
                 <div className="border-t-2"></div>
                 <div className="space-y-4">
                     <p><span className="font-bold">Review: </span>{book.review}</p>
-                    <div className="flex gap-10">
+                    <div className="flex gap-5 md:gap-10">
                         <div className="font-bold">Tag</div>
                         {
                             book.tags.map((tag, index) => <div key={index} className="text-[#23BE0A]">#{tag}</div>)
@@ -66,7 +67,7 @@ const BookDetails = () => {
                     </div>
                 </div>
                 <div className="flex gap-4">
-                    <button onClick={handleReadBook} className="btn btn-outline border-[#23BE0A] font-bold text-black">Read</button>
+                    <button onClick={handleReadBook} className="btn btn-outline border-[#23BE0A] font-bold text-black hover:bg-[#23BE0A]">Read</button>
                     <button onClick={handleWishList} className="btn bg-[#50B1C9] font-bold text-white">Wishlist</button>
                 </div>
             </div>

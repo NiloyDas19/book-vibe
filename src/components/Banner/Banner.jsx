@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import bookImage from '../../../public/images/banner.png';
 
 const Banner = () => {
     return (
@@ -8,7 +9,7 @@ const Banner = () => {
                 <Link className="btn bg-[#23BE0A] text-white font-semibold" to="/listed-books">View The List</Link>
             </div>
             <div>
-                <img src="/public/images/banner.png" alt="" />
+                <img src={bookImage} alt="" />
             </div>
         </div>
     );
